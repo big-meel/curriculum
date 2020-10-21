@@ -54,7 +54,7 @@ In this project, we'll walk through the basic Git workflow that you will use in 
 4. Add README.md to the staging area with `git add README.md`.
 5. Can you guess what `git status` will output now? README.md will be displayed in green text, while hello_world.txt will still be in red. This means that only README.md has been added to the staging area.
   <a href="https://imgur.com/b9tCLfT"><img class="tutorial-img" src="https://i.imgur.com/b9tCLfT.png" title="source: imgur.com" /></a>
-6. Now, add hello_world.txt to the staging area with a slightly different command: `git add .`, where the full stop means to add all files that are not staged. Then, type `git status` once more, and everything should now be in the staging area.
+6. Now, add hello_world.txt to the staging area with a slightly different command: `git add .`, where the full stop means to add all files **in the current directory** that are not staged. Then, type `git status` once more, and everything should now be in the staging area. *(Note: You can use `git add -A` to add ALL unstaged files to the staging area within the repository)*
   <a href="https://imgur.com/13jYJiV"><img class="tutorial-img" src="https://i.imgur.com/13jYJiV.png" title="source: imgur.com" /></a>
 9. Finally, let's commit all of the files that are in the staging area and add a descriptive commit message `git commit -m "Add hello_world.txt and edit README.md"`. Then, type `git status` once again, which will output "*nothing to commit*".
   <a href="https://imgur.com/9lda2lB"><img class="tutorial-img" src="https://i.imgur.com/9lda2lB.png" title="source: imgur.com" /></a>
@@ -63,7 +63,12 @@ In this project, we'll walk through the basic Git workflow that you will use in 
 #### Push Your Work to GitHub
 Finally, let's upload your work to the GitHub repository you created at the start of this tutorial.
 
-1. Type `git push origin master`.
+- **Note #1: Make sure you are using a recent version of git (2.28 or later). You can check your version by running:** `git --version`
+- **Note #2: If you haven't already, set your default git branch to** `main`.  
+You can do so by running: `git config --global init.defaultBranch main`
+- We are in the process of updating the screenshots to meet the new changes. For more information on the change from `master` to `main` see [GitHub's Renaming Repository](https://github.com/github/renaming).
+
+1. Type `git push origin main`.
   <a href="https://imgur.com/9uP66mj"><img class="tutorial-img" src="https://i.imgur.com/9uP66mj.png" title="source: imgur.com" /></a>
 2. Type `git status` one final time. It should output "*nothing to commit, working tree clean*".
   <a href="https://imgur.com/3Y3VjwS"><img class="tutorial-img" src="https://i.imgur.com/3Y3VjwS.png" title="source: imgur.com" /></a>
